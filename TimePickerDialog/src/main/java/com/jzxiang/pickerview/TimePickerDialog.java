@@ -6,10 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -46,11 +44,11 @@ public class TimePickerDialog extends DialogFragment implements View.OnClickList
     @Override
     public void onResume() {
         super.onResume();
-        int height = getResources().getDimensionPixelSize(R.dimen.picker_height);
-
-        Window window = getDialog().getWindow();
-        window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, height);//Here!
-        window.setGravity(Gravity.BOTTOM);
+//        int height = getResources().getDimensionPixelSize(R.dimen.picker_height);
+//
+//        Window window = getDialog().getWindow();
+//        window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, height);//Here!
+//        window.setGravity(Gravity.BOTTOM);
     }
 
     private void initialize(PickerConfig pickerConfig) {
@@ -60,7 +58,7 @@ public class TimePickerDialog extends DialogFragment implements View.OnClickList
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        Dialog dialog = new Dialog(getActivity(), R.style.Dialog_NoTitle);
+        Dialog dialog = new Dialog(getActivity(), android.R.style.Theme_Material_Light_Dialog_MinWidth);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(true);
         dialog.setCanceledOnTouchOutside(true);
