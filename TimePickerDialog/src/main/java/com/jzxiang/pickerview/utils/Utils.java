@@ -30,8 +30,8 @@ public class Utils {
     }
 
     public static void hideViews(View... views) {
-        for (int i = 0; i < views.length; i++) {
-            views[i].setVisibility(View.GONE);
+        for (View view : views) {
+            view.setVisibility(View.GONE);
         }
     }
 }

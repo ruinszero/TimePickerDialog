@@ -6,7 +6,7 @@ package com.jzxiang.pickerview.utils;
 public class PickerContants {
     public static final String FORMAT = "%02d";
 
-    public static final int DEFAULT_MIN_YEAR = 2015;
+    public static final int DEFAULT_MIN_YEAR = 2000;
     public static final int YEAR_COUNT = 50;
     public static final int MIN_MONTH = 1;
     public static final int MAX_MONTH = 12;
